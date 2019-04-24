@@ -1,29 +1,21 @@
 # promofarma-prova
-
+Para poder visualizar la prueba, es necesario tener el servidor node instalado en la máquina
+https://nodejs.org/es/
+Después de instalarlo, instalaremos VUE CLI
 ## Project setup
 ```
-npm install
+
+npm install -g @vue/cli
+
 ```
 
-### Compiles and hot-reloads for development
+### Create a project, crear el proyecto en modo default
 ```
+vue create testPromofarma
+```
+
+### Run project
+``
 npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+``
