@@ -1,7 +1,7 @@
 <template>
   <div class="cesta">
       <h1>Mi Cesta</h1>
-      <div v-for="pr in listadoSelected" :key="pr.id" @click="getData(pr)">
+      <div v-for="pr in listadoSelected" :key="pr.id" @click="getData()">
         <div>
             <img :src="pr.image" :alt="pr.titulo"/>
             <div class="titulo">{{pr.titulo}}</div>
@@ -9,13 +9,13 @@
         </div>
       </div>
       <div>
-          TOTAL ( {{listadoSelected.length}} productos) - {{ finalPrize }}
+          <div class="titulo">TOTAL  <span>  ({{listadoSelected.length}} productos)</span></div>
+          <div> {{ finalPrize }}</div>
       </div>
   </div>
 </template>
 
 <script>
-import json from '../listado/listado.json';
 
 function isNotExist(array,precio){
         for(let i in array){
@@ -35,16 +35,14 @@ export default {
     },
     props:['listadoSelected'],
     methods:{
-        getData(event){
+        getData(){
             this.$emit('productosSeleccionados',this.productSelect);
         },
     },
     beforeUpdate(){
         const precioTotal2 = [];
         for(let index in this.listadoSelected){
-            console.log(this.listadoSelected[index].precio);
             if(isNotExist(precioTotal2,this.listadoSelected[index].precio)){
-                console.log("existe");
                 precioTotal2.push({
                     precio: this.listadoSelected[index].precio
                 })
@@ -56,7 +54,6 @@ export default {
     updated(){
         let precio=0;
         for(let inddd in this.precioTotal){
-            console.log(inddd);
             precio += parseFloat(this.precioTotal[inddd].precio);
         }
         this.finalPrize = precio;
@@ -99,4 +96,31 @@ export default {
     .cesta > div > div > img{width:80px;border:1px solid #cccccc;}
     .cesta > div > div > .titulo{min-width: 300px;width:100%;margin-left:20px;}
     .cesta > div > div > .precio{font-weight: bold}
+    .cesta > div:last-of-type{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .cesta > div:last-of-type > div{
+        width:50%;
+        border:none;
+    }
+    .cesta > div:last-of-type > .titulo{
+        font-size:25px;
+        line-height:29px;
+        font-weight:400;
+    }
+    .cesta > div:last-of-type > .titulo > span{
+        font-size:18px;
+        line-height:24px;
+        margin-left:30px;
+    }
+    .cesta > div:last-of-type > div:last-of-type{
+        padding: 20px;
+        margin: 0 20px;
+        text-align:right;
+    }
 </style>
