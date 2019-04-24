@@ -7,13 +7,13 @@
     },
     "producto2": {
         "id": "1",
-        "titulo":"Xhekpon&reg; crema facial 40ml",
+        "titulo":"Xhekpon crema facial 40ml",
         "precio":"6.49",
         "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/xhekpon-crema.jpg?alt=media&token=d87f4eab-6dfa-4901-b0d9-29f1dee9faec"
     },
     "producto3": {
         "id": "2",
-        "titulo":"Cerave &reg; Crema Hidratante 340ml",
+        "titulo":"Cerave  Crema Hidratante 340ml",
         "precio":"19.74",
         "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/cerave-crema.jpg?alt=media&token=d49a9b65-c0b9-4041-a58b-49f75ea5b4ef"
     },
@@ -25,13 +25,13 @@
     },
     "producto5": {
         "id": "4",
-        "titulo":"Fotoprotector ISDIN&reg; Fusion Water SPF 50+ 50ml",
+        "titulo":"Fotoprotector ISDIN Fusion Water SPF 50+ 50ml",
         "precio":"19.74",
         "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/fotoprotector-isdin.jpg?alt=media&token=85db3e54-6e3c-47d9-beae-ece41aebbcc6"
     },
     "producto6": {
         "id": "5",
-        "titulo":"Piz Buin&reg; Allergy SPF50+ loción 200ml",
+        "titulo":"Piz Buin Allergy SPF50+ loción 200ml",
         "precio":"8.64",
         "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/piz-buin.jpg?alt=media&token=7bee72be-6361-4bf8-8567-67cfba74bc35"
     }

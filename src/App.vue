@@ -1,8 +1,6 @@
 <template>
   <div>
-    <nav-header></nav-header>
     <main>
-
       <listado-producto @productosSeleccionados="productSelected = $event"></listado-producto>
       <cesta :listadoSelected="productSelected"></cesta>
     </main>
@@ -10,7 +8,6 @@
 </template>
 
 <script>
-import Header from './components/navbar/header.vue'
 import ListadoProductos from './components/listado/listado.vue'
 import MiCesta from './components/cesta/micesta.vue'
 
@@ -18,7 +15,6 @@ import MiCesta from './components/cesta/micesta.vue'
 export default {
   name: 'app',
   components: {
-    navHeader:Header,
     listadoProducto:ListadoProductos,
     cesta:MiCesta    
   },
@@ -37,6 +33,9 @@ body{
   line-height: 19px;
   font-family: 'Open Sans', sans-serif;
   color:#333333;
+  margin:0;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
 }
 main{
   display:-webkit-box;
@@ -44,9 +43,26 @@ main{
   display:flex;
   max-width: 1200px;
   margin:0 auto;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap
 }
 main > ul,main> div{
-  width:50%;
+  width:100%;
 }
-
+@media(min-width:601px){
+  main{
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap
+  }
+  main > ul, main > div{
+    min-width:600px;
+    width:50%;
+  }
+}
 </style>

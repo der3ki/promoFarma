@@ -10,7 +10,7 @@
       </div>
       <div>
           <div class="titulo">TOTAL  <span>  ({{listadoSelected.length}} productos)</span></div>
-          <div> {{ finalPrize }}</div>
+          <div> {{ finalPrize }}€</div>
       </div>
   </div>
 </template>
@@ -34,27 +34,23 @@ export default {
         }
     },
     props:['listadoSelected'],
-    methods:{
-        getData(){
-            this.$emit('productosSeleccionados',this.productSelect);
-        },
-    },
     beforeUpdate(){
         const precioTotal2 = [];
         for(let index in this.listadoSelected){
+            //se comprueba que en el array creado, no existe el mismo precio dos veces
             if(isNotExist(precioTotal2,this.listadoSelected[index].precio)){
                 precioTotal2.push({
                     precio: this.listadoSelected[index].precio
                 })
             }
         }
+        //Se iguala el array con el array creado localmente
         this.precioTotal = precioTotal2;
-    },created(){
     },
     updated(){
         let precio=0;
-        for(let inddd in this.precioTotal){
-            precio += parseFloat(this.precioTotal[inddd].precio);
+        for(let indexPrecio in this.precioTotal){
+            precio += parseFloat(this.precioTotal[indexPrecio].precio);
         }
         this.finalPrize = precio;
     }
@@ -68,17 +64,18 @@ export default {
     }
     .cesta > h1{
         margin: 0;
-        font-size: 32px;
-        line-height: 36px;
+        font-size: 22px;
+        line-height: 26px;
         color: #97be0d;
         font-weight: 400;
         border-bottom: 1px solid #97be0d;
         text-transform: uppercase;
-        padding: 20px 0 20px 40px;
+        padding: 20px 0 20px 10px;
     }
     .cesta > div{
-        display:-webkit-box;
-        display:-ms-flexbox;
+        display:none;
+    }
+    .cesta > div:last-of-type{
         display:flex;
     }
     .cesta > div > div:first-of-type{
@@ -88,12 +85,12 @@ export default {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        padding: 20px;
-        margin: 0 20px;
+        padding: 10px;
+        margin: 0;
         width: 100%;
         border-bottom: 1px solid #cccc;
     }
-    .cesta > div > div > img{width:80px;border:1px solid #cccccc;}
+    .cesta > div > div > img{width:80px;border:1px solid #cccccc;display:none;}
     .cesta > div > div > .titulo{min-width: 300px;width:100%;margin-left:20px;}
     .cesta > div > div > .precio{font-weight: bold}
     .cesta > div:last-of-type{
@@ -105,13 +102,13 @@ export default {
         align-items: center;
     }
     .cesta > div:last-of-type > div{
-        width:50%;
         border:none;
     }
     .cesta > div:last-of-type > .titulo{
         font-size:25px;
         line-height:29px;
         font-weight:400;
+        width:75%;
     }
     .cesta > div:last-of-type > .titulo > span{
         font-size:18px;
@@ -119,8 +116,36 @@ export default {
         margin-left:30px;
     }
     .cesta > div:last-of-type > div:last-of-type{
-        padding: 20px;
-        margin: 0 20px;
+        padding: 10px;
+        margin: 0 10px;
         text-align:right;
+        font-size:25px;
+        line-height:29px;
+        font-weight:bold;
+    }
+
+    @media (min-width: 601px) {
+        .cesta > div{
+            display:flex;
+        }
+        .cesta > div > div > img{
+            display:block;
+        }
+        .cesta > h1{
+            padding: 20px 0 20px 40px;
+            font-size:32px;
+            line-height:36px;
+        }
+        .cesta > div > div:first-of-type{
+            padding: 20px;
+            margin: 0 20px;
+        }
+        .cesta > div:last-of-type > div{
+            width:50%;
+        }
+        .cesta > div:last-of-type > div:last-of-type{
+            padding:20px;
+            margin: 0 10px;
+        }
     }
 </style>
