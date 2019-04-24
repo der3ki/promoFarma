@@ -58,7 +58,8 @@ main > ul,main> div{
     -ms-flex-pack:center;
     justify-content:center;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap
+    flex-wrap:wrap;
+    margin-top:50px;
   }
   main > ul, main > div{
     min-width:600px;
