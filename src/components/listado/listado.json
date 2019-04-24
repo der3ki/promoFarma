@@ -1,0 +1,39 @@
+{
+    "producto1": {
+        "id": "0",
+        "titulo":"LaJusticia colágeno con magnesio 450comp",
+        "precio":"14.35",
+        "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/lajusticia-colageno.jpg?alt=media&token=cc45b995-2baa-4e11-b66e-c09b67d345e4"
+    },
+    "producto2": {
+        "id": "1",
+        "titulo":"Xhekpon&reg; crema facial 40ml",
+        "precio":"6.49",
+        "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/xhekpon-crema.jpg?alt=media&token=d87f4eab-6dfa-4901-b0d9-29f1dee9faec"
+    },
+    "producto3": {
+        "id": "2",
+        "titulo":"Cerave &reg; Crema Hidratante 340ml",
+        "precio":"19.74",
+        "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/cerave-crema.jpg?alt=media&token=d49a9b65-c0b9-4041-a58b-49f75ea5b4ef"
+    },
+    "producto4": {
+        "id": "3",
+        "titulo":"Hyabak solución 10ml",
+        "precio":"9.48",
+        "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/hyabak-solucion.jpg?alt=media&token=c617d519-1f54-4e19-8620-3bec498642ca"
+    },
+    "producto5": {
+        "id": "4",
+        "titulo":"Fotoprotector ISDIN&reg; Fusion Water SPF 50+ 50ml",
+        "precio":"19.74",
+        "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/fotoprotector-isdin.jpg?alt=media&token=85db3e54-6e3c-47d9-beae-ece41aebbcc6"
+    },
+    "producto6": {
+        "id": "5",
+        "titulo":"Piz Buin&reg; Allergy SPF50+ loción 200ml",
+        "precio":"8.64",
+        "image": "https://firebasestorage.googleapis.com/v0/b/promofarma-79a30.appspot.com/o/piz-buin.jpg?alt=media&token=7bee72be-6361-4bf8-8567-67cfba74bc35"
+    }
+
+}

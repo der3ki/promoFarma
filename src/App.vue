@@ -1,28 +1,52 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <nav-header></nav-header>
+    <main>
+
+      <listado-producto @productosSeleccionados="productSelected = $event"></listado-producto>
+      <cesta :listadoSelected="productSelected"></cesta>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/navbar/header.vue'
+import ListadoProductos from './components/listado/listado.vue'
+import MiCesta from './components/cesta/micesta.vue'
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    navHeader:Header,
+    listadoProducto:ListadoProductos,
+    cesta:MiCesta    
+  },
+  data(){
+    return{
+      productSelected: []
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+body{
+  font-size:15px;
+  line-height: 19px;
+  font-family: 'Open Sans', sans-serif;
+  color:#333333;
 }
+main{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  max-width: 1200px;
+  margin:0 auto;
+}
+main > ul,main> div{
+  width:50%;
+}
+
 </style>
