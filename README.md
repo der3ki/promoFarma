@@ -16,6 +16,7 @@ vue create testPromofarma
 
 ### Run project
 ``
+cd testPromofarma
 npm run serve
 
 ``
